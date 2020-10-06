@@ -1,0 +1,8 @@
+name: OpenIronGP
+description: Adds the ability for players to open iron doors when in their own GriefPrevention claims.
+
+main: net.savagedev.openirongp.OpenIronGP
+version: 1.0.0
+
+website: https://www.savagedev.net/
+author: SavageAvocado

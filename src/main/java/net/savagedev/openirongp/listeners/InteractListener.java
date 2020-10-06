@@ -12,12 +12,17 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.EquipmentSlot;
 
 public class InteractListener implements Listener {
     private final DataStore gpDataStore = GriefPrevention.instance.dataStore;
 
     @EventHandler
     public void on(final PlayerInteractEvent e) {
+        if (e.getHand() != EquipmentSlot.HAND) {
+            return;
+        }
+
         final Block block = e.getClickedBlock();
         if (block == null || !this.isValid(block)) {
             return;
